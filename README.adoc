@@ -1,0 +1,19 @@
+= How to build the project
+
+== Prerequisites
+
+Setup the JDK
+
+[source,shell]
+====
+sdk env install
+====
+
+== Build
+
+This project is built using Gradle. To build the project, run the following command:
+
+[source,shell]
+====
+ ./gradlew build
+====
