@@ -24,13 +24,29 @@ import org.springframework.stereotype.Component
 @Component
 class CalculatorService {
 
-    fun performCalculation(a: Int, b: Int, op: String): String {
+    fun performCalculation(a: Float, b: Float, op: String): String {
         return when (op) {
             "+" -> (a + b).toString()
             "-" -> (a - b).toString()
             "*" -> (a * b).toString()
             "/", ":" -> (a / b).toString()
             else -> "Invalid operation"
+        }
+    }
+
+    fun splitOperation(op: String): Array<String> {
+        if (op.contains("+")) {
+            return op.split("+").plus("+").toTypedArray()
+        } else if (op.contains("-")) {
+            return op.split("-").plus("-").toTypedArray()
+        } else if (op.contains("*")) {
+            return op.split("*").plus("*").toTypedArray()
+        } else if (op.contains("/")) {
+            return op.split("/").plus("/").toTypedArray()
+        } else if (op.contains(":")) {
+            return op.split(":").plus("/").toTypedArray()
+        } else {
+            return arrayOf("ERROR", "ERROR", "ERROR")
         }
     }
 }
