@@ -1,6 +1,5 @@
 package io.emja.playground
 
-import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
