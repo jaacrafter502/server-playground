@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*
  */
 @RestController
 @RequestMapping("/hi")
-class Test {
+class CalculatorView(val calculatorService: CalculatorService) {
 
     @GetMapping("/form")
     fun showForm(): String {
@@ -43,13 +43,7 @@ class Test {
 
     @PostMapping("/calculate")
     fun calculate(@RequestParam a: Int, @RequestParam b: Int, @RequestParam op: String): String {
-        val result = when (op) {
-            "+" -> a + b
-            "-" -> a - b
-            "*" -> a * b
-            "/", ":" -> a / b
-            else -> "Invalid operation"
-        }
+        val result = calculatorService.performCalculation(a, b, op)
         return """
             <html>
                 <head>

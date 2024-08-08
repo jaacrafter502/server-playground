@@ -11,8 +11,9 @@ class ServerApplication
  * @param args the command line arguments
  */
 fun main(args: Array<String>) {
-	/**
-	 * Main entry point of the Spring Boot application.
-	 */
-	runApplication<ServerApplication>(*args)
+    /**
+     * Main entry point of the Spring Boot application.
+     */
+    runApplication<ServerApplication>(*args)
 }
+
