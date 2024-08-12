@@ -17,3 +17,8 @@ This project is built using Gradle. To build the project, run the following comm
 ====
  ./gradlew build
 ====
+
+
+== Documentation
+
+xref:docs/Server.adoc[Server Process / Thread Model and Virtual Machines]
