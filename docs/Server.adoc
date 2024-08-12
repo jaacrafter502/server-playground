@@ -10,4 +10,4 @@ image::images/Thread-Modell.svg[]
 
 == Virtual Machines
 
-image::images/Model-der-Virtuell-Machines.svg
+image::images/Model-der-Virtuell-Machines.svg[]
